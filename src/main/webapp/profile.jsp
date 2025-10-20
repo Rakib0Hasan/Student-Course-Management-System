@@ -13,7 +13,19 @@
 		<jsp:include page="header.jsp" />
 	</header>
 	
-	<main></main>
+	<main>
+		<aside class="left-sidebar">
+			<p>This is left sidebar.</p>
+		</aside>
+		
+		<section class="main-content">
+			
+		</section>
+		
+		<aside class="right-sidebar">
+			<p>This is right sidebar</p>
+		</aside>
+	</main>
 	
 	<footer>
 		<jsp:include page="footer.jsp" />

@@ -14,9 +14,19 @@
 	</header>
 	
 	<main>
+		<aside class="left-sidebar">
+			<p>This is left sidebar.</p>
+		</aside>
 		
+		<section class="main-content">
+			<jsp:include page="addStudent.jsp" />
+		</section>
+		
+		<aside class="right-sidebar">
+			<p>This is right sidebar</p>
+		</aside>
 	</main>
-	
+
 	<footer>
 		<jsp:include page="footer.jsp" />
 	</footer>

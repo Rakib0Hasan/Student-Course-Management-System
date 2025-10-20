@@ -6,7 +6,7 @@
 	box-sizing: border-box;
 }
 
-html body {
+html, body {
 	height: 100%;
 	width: 100%;
 }
@@ -50,7 +50,100 @@ body {
 main {
 	background-color: rgb(147, 211, 226);
 	flex: 1;
-	padding: 15px;
+	padding: 0px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: stretch;
+}
+
+.left-sidebar {
+	width: 20%;
+	background-color: rgb(168, 230, 247);
+	padding: 10px;
+}
+
+.main-content {
+	width: 60%;
+	background-color: rgb(147, 211, 226);
+	padding: 10px;
+	
+}
+
+.addStudent {
+	max-width: 450px;
+	margin: 15px auto;
+	padding: 25px;
+	background-color: rgb(168, 230, 247);
+	border-radius: 8px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.addStudent h3 {
+	text-align: center;
+	color: rgb(15, 65, 85);
+	padding-bottom: 15px;
+}
+
+.addStudent label {
+	font-weight: bold;
+	color: rgb(24, 87, 107);
+}
+
+.addStudent input[type="text"],
+.addStudent input[type="email"],
+.addStudent input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid rgb(168, 230, 247);
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+    margin-bottom: 12px;
+}
+
+.addStudent input[type="text"]:focus,
+.addStudent input[type="email"]:focus,
+.addStudent input[type="password"]:focus {
+    outline: none;
+    border-color: rgb(24, 87, 107);
+    box-shadow: 0 0 4px rgba(24, 87, 107, 0.3);
+}
+
+.addStudent input[type="submit"] {
+    background-color: rgb(24, 87, 107);
+    color: white;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.addStudent input[type="submit"]:hover {
+    background-color: rgb(15, 65, 85);
+}
+
+.alertContainer {
+	margin-top: 10px;
+	font-size: 13px;
+	color: rgb(239, 79, 108);
+	text-align: center;
+	animation: fadeOut 3s forwards;
+}
+@keyframes fadeOut {
+	0% {opacity: 1; }
+	70% {opacity: 1;}
+	100% {opacity: 0; display: none;}
+}
+
+.right-sidebar {
+	width: 20%;
+	background-color: rgb(168, 230, 247);
+	padding: 10px;
 }
 
 .footer {
