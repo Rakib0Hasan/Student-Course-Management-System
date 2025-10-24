@@ -15,10 +15,19 @@ public class StudentRepository {
 			return session.createQuery("from Student", Student.class).list();
 		}
 	}
-
+	
 	public Student getStudentById(int id) {
 		try(Session session = HibernateUtil.getSessionFactory().openSession()) {
 			return session.get(Student.class, id);
+		}
+	}
+	
+	
+	public Student getStudentByEmail(String email) {
+		try(Session session = HibernateUtil.getSessionFactory().openSession()) {
+			Student student = session.createQuery("from Student s where s.email = :email", Student.class)
+						.setParameter("email", email).uniqueResult();
+			return student;
 		}
 	}
 	

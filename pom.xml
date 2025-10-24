@@ -71,6 +71,18 @@
     	<version>2.3.1</version>
 	</dependency>
     
+    <!-- https://mvnrepository.com/artifact/javax.servlet/jstl -->
+	<dependency>
+    	<groupId>javax.servlet</groupId>
+    	<artifactId>jstl</artifactId>
+    	<version>1.2</version>
+	</dependency>
+
+	<dependency>
+		<groupId>com.rakib0hasan</groupId>
+		<artifactId>SpringBootRestDemo</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</dependency>
   </dependencies>
 
   <build>

@@ -8,6 +8,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.Response;
 
 import com.rakib0hasan.model.Student;
@@ -23,8 +24,8 @@ public class StudentResource {
 	}
 	
 	@GET
-	@Path("/{id}")
-	public Response	 getStudentById(@PathParam("id") int id) {
+	@Path("/id/{id}")
+	public Response getStudentById(@PathParam("id") int id) {
 		Student student = repository.getStudentById(id);
 		if(student == null) {
 			return Response.status(Response.Status.NOT_FOUND).build();
@@ -35,7 +36,20 @@ public class StudentResource {
 	}
 	
 	@GET
-	public boolean isEmailExists(String email) {
+	@Path("/email/{email}")
+	public Response getStudentByEmail(@PathParam("email") String email) {
+		Student student = repository.getStudentByEmail(email);
+		if(student == null) {
+			return Response.status(Response.Status.NOT_FOUND).build();
+		}
+		else {
+			return Response.ok(student).build();
+		}
+	}
+	
+	@GET
+	@Path("/exists")
+	public boolean isEmailExists(@QueryParam("email")String email) {
 		return repository.isEmailExists(email);
 	}
 	

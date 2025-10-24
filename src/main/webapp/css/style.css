@@ -67,7 +67,7 @@ main {
 	width: 60%;
 	background-color: rgb(147, 211, 226);
 	padding: 10px;
-	
+	overflow-x: auto;
 }
 
 .addStudent {
@@ -138,6 +138,84 @@ main {
 	0% {opacity: 1; }
 	70% {opacity: 1;}
 	100% {opacity: 0; display: none;}
+}
+
+.viewAllStudents {
+	text-align: center;
+}
+
+.viewAllStudents a {
+	text-decoration: none;
+	background-color: rgb(168, 230, 247);
+	font-weight: bold;
+	color: rgb(24, 87, 107);
+	padding: 5px;
+	cursor: pointer;
+	/*border: 1px solid black; */
+	border-radius: 3px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.searchByEmail {
+	background-color: rgb(168, 230, 247);
+	width: fit-content;
+	padding: 10px;
+	margin: 10px auto;
+	border-radius: 5px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.searchByEmail label {
+	font-weight: bold;
+	color: rgb(24, 87, 107);
+}
+
+.searchByEmail input[type="email"] {
+	max-width: 250px;
+	padding: 5px;
+	font-size: 16px;
+	border: 2px solid rgb(168, 230, 247);
+	border-radius: 5px;
+}
+
+.searchByEmail input[type="email"]:focus {
+	outline: none;
+	border-color: rgb(24, 87, 107);
+}
+
+.searchByEmail input[type="submit"] {
+	background-color: rgb(24, 87, 107);
+	color: rgb(255, 255, 255);
+	font-size: 14px;
+	padding:6px 8px;
+	margin-top: 8px;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.searchByEmail input[type="submit"]:hover {
+	background-color:  rgb(15, 65, 85);
+}
+
+.viewAllStudentsTable {
+	max-width: 600px;
+	margin: 0 auto;
+	background-color: rgb(168, 230, 247);
+	/*border: 1px solid rgb(0, 137, 168);*/
+	box-shadow: 0 4px 6px rgb(0, 0, 0, 0.1);
+	display: none;
+	overflow-x: auto;
+}
+
+.viewAllStudentsTable table {
+	width: 100%;
+}
+
+.viewAllStudentsTable table th,
+.viewAllStudentsTable table td {
+	border: 1px solid rgb(0, 137, 168);
+	padding: 5px;
 }
 
 .right-sidebar {
