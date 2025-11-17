@@ -6,7 +6,7 @@
 <div class="searchByEmail">
 	<form action="SearchByEmailServlet" target="_self" method="get">
 		<label for="email">Search by email:</label><br>
-		<input type="email" id="email" name="email" placeholder="rakib@gmail.com" required><br>
+		<input type="email" id="email" name="email" placeholder="hasankhanrakib0@gmail.com" required><br>
 		<input type="submit" value="Search">
 	</form>
 </div>

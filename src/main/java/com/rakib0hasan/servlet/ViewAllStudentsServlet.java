@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.rakib0hasan.model.Student;
 import com.rakib0hasan.resource.StudentResource;
 
-@WebServlet("/ViewAllStudents")
+@WebServlet("/viewAllStudentsServlet")
 public class ViewAllStudentsServlet extends HttpServlet {
 	
 	private final StudentResource studentResource = new StudentResource();
@@ -21,5 +21,9 @@ public class ViewAllStudentsServlet extends HttpServlet {
 		List<Student> students = studentResource.getStudent();
 		request.setAttribute("students", students);
 		request.getRequestDispatcher("student.jsp").forward(request, response);
+	}
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		doGet(request, response);
 	}
 }

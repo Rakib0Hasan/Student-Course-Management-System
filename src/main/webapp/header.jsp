@@ -2,10 +2,10 @@
 
 <nav class="header">
     <ul>
-        <li><a href="index.jsp">Home</a></li>
-        <li><a href="student.jsp">Student</a></li>
-        <li><a href="course.jsp">Course</a></li>
-        <li><a href="profile.jsp">Profile</a></li>
-        <li><a href="help.jsp">Help</a></li>
+        <li><a href="${pageContext.request.contextPath}/index.jsp">Home</a></li>
+        <li><a href="${pageContext.request.contextPath}/student.jsp">Student</a></li>
+        <li><a href="${pageContext.request.contextPath}/course.jsp">Course</a></li>
+        <li><a href="${pageContext.request.contextPath}/Login/login.jsp" class="profileLink">Login</a></li>
+        <li><a href="${pageContext.request.contextPath}/help.jsp">Help</a></li>
     </ul>
 </nav>

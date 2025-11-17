@@ -10,12 +10,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.rakib0hasan.model.Student;
+import com.rakib0hasan.model.User;
+import com.rakib0hasan.model.UserRole;
 import com.rakib0hasan.resource.StudentResource;
+import com.rakib0hasan.resource.UserResource;
 
 @WebServlet("/addNewStudent")
 public class AddNewStudent extends HttpServlet {
 	
 	private final StudentResource studentResource = new StudentResource();
+	private final UserResource userResource = new UserResource();
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String firstName = request.getParameter("fname");
@@ -51,9 +55,19 @@ public class AddNewStudent extends HttpServlet {
 		student.setEmail(email);
 		student.setPassword(password);
 		
+		User user = new User();
+		user.setName(student.getName());
+		user.setEmail(student.getEmail());
+		user.setPassword(student.getPassword());
+		user.setRole(UserRole.STUDENT);
+		
 		try {
 			studentResource.createStudent(student);
 			request.setAttribute("alert", "Student added successfully!");
+			
+			userResource.createUser(user);
+			System.out.println("Got user saved");
+			
 			request.getRequestDispatcher("student.jsp").forward(request, response);
 		} catch(Exception e) {
 			e.printStackTrace();

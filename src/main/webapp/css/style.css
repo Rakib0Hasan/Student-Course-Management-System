@@ -158,7 +158,8 @@ main {
 
 .searchByEmail {
 	background-color: rgb(168, 230, 247);
-	width: fit-content;
+	width: 100%;
+	max-width: 300px;
 	padding: 10px;
 	margin: 10px auto;
 	border-radius: 5px;
@@ -171,7 +172,8 @@ main {
 }
 
 .searchByEmail input[type="email"] {
-	max-width: 250px;
+	width: 100%;
+	max-width: 300px;
 	padding: 5px;
 	font-size: 16px;
 	border: 2px solid rgb(168, 230, 247);
@@ -217,6 +219,150 @@ main {
 	border: 1px solid rgb(0, 137, 168);
 	padding: 5px;
 }
+
+.addNewCourse {
+	max-width: 450px;
+	margin: 15px auto;
+	padding: 20px;
+	background-color: rgb(168, 230, 247);
+	border-radius: 8px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.addNewCourse h3 {
+	text-align: center;
+	color: rgb(15, 65, 85);
+	padding-bottom: 15px;
+}
+
+.addNewCourse label {
+	font-weight: bold;
+	color: rgb(24, 87, 107);
+}
+
+.addNewCourse input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid rgb(168, 230, 247);
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+    margin-bottom: 12px;
+}
+
+.addNewCourse textarea {
+	width: 100%;
+	padding: 10px;
+    border: 2px solid rgb(168, 230, 247);
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+    margin-bottom: 12px;
+}
+
+.addNewCourse input[type="text"]:focus,
+.addNewCourse textarea:focus {
+    outline: none;
+    border-color: rgb(24, 87, 107);
+    box-shadow: 0 0 4px rgba(24, 87, 107, 0.3);
+}
+
+.addNewCourse input[type="submit"] {
+    background-color: rgb(24, 87, 107);
+    color: white;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.addNewCourse input[type="submit"]:hover {
+    background-color: rgb(15, 65, 85);
+}
+
+.viewAllCourses {
+	max-width: fit-content;
+	margin: 10px auto;	
+}
+
+.viewAllCourses button {
+	width: 140px;
+	height: 40px;
+	background-color:  rgb(24, 87, 107);
+	color: rgb(255, 255, 255);
+	padding: 10px;
+	font-size: 16px;
+	border: none;
+	border-radius: 6px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.login {
+	max-width: 450px;
+	margin: 15px auto;
+	padding: 20px;
+	background-color: rgb(168, 230, 247);
+	border-radius: 8px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.login h2 {
+	text-align: center;
+	color: rgb(15, 65, 85);
+	padding-bottom: 15px;
+}
+
+.login label {
+	font-weight: bold;
+	color: rgb(24, 87, 107);
+}
+
+.login input[type="email"],
+.login input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid rgb(168, 230, 247);
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+    margin-bottom: 12px;
+}
+
+.login input[type="email"]:focus,
+.login input[type="password"]:focus {
+	outline: none;
+    border-color: rgb(24, 87, 107);
+    box-shadow: 0 0 4px rgba(24, 87, 107, 0.3);
+}
+
+.login input[type="submit"] {
+    background-color: rgb(24, 87, 107);
+    color: white;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.login input[type="submit"]:hover {
+    background-color: rgb(15, 65, 85);
+}
+
+.login h5 {
+	text-align: center;
+	color: rgb(15, 65, 85);
+	margin-top: 10px;
+}
+
 
 .right-sidebar {
 	width: 20%;

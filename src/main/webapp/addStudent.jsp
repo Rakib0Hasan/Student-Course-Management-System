@@ -9,7 +9,7 @@
 		<label for="lname">Enter last name:</label><br>
 		<input type="text" id="lname" name="lname" placeholder="Hasan" required><br>
 		<label for="email">Enter email:</label><br>
-		<input type="email" id="email" name="email" placeholder="rakib@gmail.com" required><br>
+		<input type="email" id="email" name="email" placeholder="hasankhanrakib0@gmail.com" required><br>
 		<label for="password">Enter password:</label><br>
 		<input type="password" id="password" name="password" placeholder="123456" required><br>
 		<label for="confirmPassword">Confirm password:</label><br>

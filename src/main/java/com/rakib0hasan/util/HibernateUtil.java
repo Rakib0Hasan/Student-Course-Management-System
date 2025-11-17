@@ -8,6 +8,7 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
 import com.rakib0hasan.model.Course;
 import com.rakib0hasan.model.Student;
+import com.rakib0hasan.model.User;
 
 public class HibernateUtil {
     
@@ -32,6 +33,7 @@ public class HibernateUtil {
             MetadataSources sources = new MetadataSources(registry);
             sources.addAnnotatedClass(Student.class);
             sources.addAnnotatedClass(Course.class);
+            sources.addAnnotatedClass(User.class);
             
             // Build SessionFactory
             Metadata metadata = sources.getMetadataBuilder().build();

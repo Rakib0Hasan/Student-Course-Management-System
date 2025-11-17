@@ -43,7 +43,6 @@ public class StudentRepository {
 				return false;
 			}
 		}
-		
 	}
 	
 	public void saveStudent(Student student) {
@@ -58,7 +57,6 @@ public class StudentRepository {
 			}
 			e.printStackTrace();
 		}
-		
 	}
 
 	public void updateStudent(Student student) {

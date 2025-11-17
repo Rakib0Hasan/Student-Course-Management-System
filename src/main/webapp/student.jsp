@@ -26,7 +26,7 @@
 			<jsp:include page="viewAllStudents.jsp" />
 			<c:if test="${empty students}">
 				<%
-					request.getRequestDispatcher("ViewAllStudents").forward(request, response);
+					request.getRequestDispatcher("viewAllStudentsServlet").forward(request, response);
 				%>
 			</c:if>
 			

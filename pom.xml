@@ -83,6 +83,11 @@
 		<artifactId>SpringBootRestDemo</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 	</dependency>
+	<dependency>
+		<groupId>com.rakib0hasan</groupId>
+		<artifactId>RestJersey</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</dependency>
   </dependencies>
 
   <build>
