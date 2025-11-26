@@ -14,3 +14,26 @@ function showTable(){
 		document.getElementById("emailStudentTable").style.display = "block";
 	}
 }
+
+const dropArea = document.getElementById("profileInputImageLabelId");
+const inputFile = document.getElementById("profileInputImageId");
+const previewImage = document.getElementById("previewImage");
+
+inputFile.addEventListener("change", uploadImage);
+
+function uploadImage() {
+	let imageLink = URL.createObjectURL(inputFile.files[0]);
+	previewImage.style.backgroundImage = `url(${imageLink})`;
+	previewImage.textContent = "";
+}
+
+dropArea.addEventListener("dragover", function(e){
+	e.preventDefault();
+});
+
+dropArea.addEventListener("drop", function(e){
+	e.preventDefault();
+	inputFile.files = e.dataTransfer.files;
+	uploadImage();
+});
+

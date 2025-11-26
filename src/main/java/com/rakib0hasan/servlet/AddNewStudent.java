@@ -68,11 +68,11 @@ public class AddNewStudent extends HttpServlet {
 			userResource.createUser(user);
 			System.out.println("Got user saved");
 			
-			request.getRequestDispatcher("student.jsp").forward(request, response);
+			request.getRequestDispatcher("/WEB-INF/jsp/student.jsp").forward(request, response);
 		} catch(Exception e) {
 			e.printStackTrace();
 			request.setAttribute("alert", "Something went wrong, please try again!");
-			request.getRequestDispatcher("student.jsp").forward(request, response);
+			request.getRequestDispatcher("/WEB-INF/jsp/student.jsp").forward(request, response);
 		}
 		
 	}

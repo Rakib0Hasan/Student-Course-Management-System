@@ -20,7 +20,7 @@ public class ViewAllStudentsServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		List<Student> students = studentResource.getStudent();
 		request.setAttribute("students", students);
-		request.getRequestDispatcher("student.jsp").forward(request, response);
+		request.getRequestDispatcher("/WEB-INF/jsp/student.jsp").forward(request, response);
 	}
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
