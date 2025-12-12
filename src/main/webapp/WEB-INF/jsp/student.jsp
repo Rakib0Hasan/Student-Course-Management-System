@@ -24,12 +24,6 @@
 			<jsp:include page="addStudent.jsp" />
 			<br>
 			<jsp:include page="viewAllStudents.jsp" />
-			<c:if test="${empty students}">
-				<%
-					request.getRequestDispatcher("/viewAllStudentsServlet").forward(request, response);
-				%>
-			</c:if>
-			
 			<c:import url="searchByEmail.jsp" />
 		</section>
 		

@@ -19,15 +19,25 @@
 		</aside>
 		
 		<section class="main-content">
+			
 			<div id="profileId" class="profile">
-				<div id="profilePictureId" class="profilePicture">
-					<label for="profileInputImageId" id="profileInputImageLabelId">
-						<input type="file" accept="image/*" id="profileInputImageId" hidden>
-						<div id="previewImage">
-							<img src="${pageContext.request.contextPath}/images/imageUploader_Colored.png">
-							<p>Drag and drop or click here<br>to upload image.</p>
-						</div>
-					</label>
+			
+				<form action="${pageContext.request.contextPath}/uploadUserProfilePictuerServlet" target="_self" method="post" enctype="multipart/form-data">
+					<div id="profilePictureId" class="profilePicture">
+						<label for="profileInputImageId" id="profileInputImageLabelId">
+							<input type="file" accept="image/*" id="profileInputImageId" hidden>
+							<div id="previewImage">
+								<img src="${pageContext.request.contextPath}/images/imageUploader_Colored.png">
+								<p>Drag and drop or click here<br>to upload image.</p>
+							</div>
+						</label>
+					</div>
+					<input type="hidden" name="userEmail" value="${user.email}"><br>
+					<button type="submit" class="btn" id="profileImageUploadId">Upload</button>
+				</form>
+				
+				<div class=informationSeperator>
+				
 				</div>
 				
 				<div class="persionalInfo">

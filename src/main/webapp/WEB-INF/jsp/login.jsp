@@ -32,7 +32,7 @@
 			<div class="login">
 				<form action="${pageContext.request.contextPath}/LoginValidationServlet" method="post" target="_self">
 					<h2>Login</h2>
-					<label for="username">Email:</label><br>
+					<label for="email">Email:</label><br>
 					<input type="email" id="email" name="email" placeholder="your@gmail.com" required><br>
 					<label for="password">Password:</label><br>
 					<input type="password" id="password" name="password" placeholder="Enter password" required><br>

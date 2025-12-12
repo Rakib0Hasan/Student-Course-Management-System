@@ -47,12 +47,6 @@ public class StudentResource {
 		}
 	}
 	
-	@GET
-	@Path("/exists")
-	public boolean isEmailExists(@QueryParam("email")String email) {
-		return repository.isEmailExists(email);
-	}
-	
 	@POST
 	public Response createStudent(Student student) {
 		repository.saveStudent(student);
@@ -62,7 +56,6 @@ public class StudentResource {
 	@PUT
 	@Path("/{id}")
 	public Response updateStudent(@PathParam("id")int id, Student student) {
-		student.setId(id);
 		repository.updateStudent(student);
 		return Response.ok(student).build();
 	}

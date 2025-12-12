@@ -15,6 +15,19 @@ public class UserRepository {
 		}
 	}
 
+	public boolean isEmailExists(String email) {
+		try(Session session = HibernateUtil.getSessionFactory().openSession()){
+			Long count = (Long) session.createQuery("Select count(u) from User u where u.email = :email")
+					.setParameter("email", email).uniqueResult();
+			if(count > 0) {
+				return true;
+			}
+			else {
+				return false;
+			}
+		}
+	}
+	
 	public void saveUser(User user) {
 		Transaction transaction = null;
 		try(Session session = HibernateUtil.getSessionFactory().openSession()){

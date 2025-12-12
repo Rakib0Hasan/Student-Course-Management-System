@@ -30,7 +30,7 @@ public class LoginValidationServlet extends HttpServlet {
 			String redirectUrl = null;
 			
 			if(existingSession != null) {
-				redirectUrl = (String) existingSession.getAttribute("redirectAfterLogin");
+				redirectUrl = (String) existingSession.getAttribute("redirectAfterLogin"); 
 				existingSession.invalidate();
 			}
 			

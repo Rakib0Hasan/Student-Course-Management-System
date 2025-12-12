@@ -31,20 +31,6 @@ public class StudentRepository {
 		}
 	}
 	
-	
-	public boolean isEmailExists(String email) {
-		try(Session session = HibernateUtil.getSessionFactory().openSession()){
-			Long count = (Long) session.createQuery("Select count(s) from Student s where s.email = :email")
-					.setParameter("email", email).uniqueResult();
-			if(count > 0) {
-				return true;
-			}
-			else {
-				return false;
-			}
-		}
-	}
-	
 	public void saveStudent(Student student) {
 		Transaction transaction = null;
 		try(Session session = HibernateUtil.getSessionFactory().openSession()) {

@@ -20,7 +20,7 @@ import com.rakib0hasan.model.User;
 public  class AuthenticationFilter implements Filter {
 	
 	private static final List<String> ALLOWED_URLS = Arrays.asList(
-			"/css/", "/images/", "/js/", "/LoginValidationServlet","/home", "/login");
+			"/css/", "/images/", "/js/", "/LoginValidationServlet","/addNewStudent","/register","/home", "/login");
 	
 	private boolean isAllowed(String path) {
 		return ALLOWED_URLS.stream().anyMatch(path::startsWith) ||

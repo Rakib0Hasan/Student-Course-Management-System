@@ -51,6 +51,17 @@ body {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
+.btn {
+	height: 40px;
+	background-color:  rgb(24, 87, 107);
+	color: rgb(255, 255, 255);
+	padding: 0 20px;
+	font-size: 16px;
+	border: none;
+	border-radius: 6px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 main {
 	background-color: rgb(147, 211, 226);
 	flex: 1;
@@ -96,7 +107,12 @@ main {
 
 .addStudent input[type="text"],
 .addStudent input[type="email"],
-.addStudent input[type="password"] {
+.addStudent input[type="password"],
+.addStudent input[type="tel"],
+.addStudent input[type="date"],
+.addStudent input[type="tel"],
+.addStudent input[type="number"],
+.addStudent select {
     width: 100%;
     padding: 10px;
     border: 2px solid rgb(168, 230, 247);
@@ -109,7 +125,11 @@ main {
 
 .addStudent input[type="text"]:focus,
 .addStudent input[type="email"]:focus,
-.addStudent input[type="password"]:focus {
+.addStudent input[type="password"]:focus,
+.addStudent input[type="tel"]:focus,
+.addStudent input[type="date"]:focus,
+.addStudent input[type="number"]:focus,
+.addStudent select:focus {
     outline: none;
     border-color: rgb(24, 87, 107);
     box-shadow: 0 0 4px rgba(24, 87, 107, 0.3);
@@ -380,7 +400,8 @@ main {
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
 }
 
@@ -432,6 +453,20 @@ main {
 	text-align: center;
 	color: rgb(24, 87, 107);
 }
+
+#profileImageUploadId {
+	display: block;
+	margin: 0 auto 10px;
+}
+
+.informationSeperator {
+	height: 10px;
+	width: 100%;
+	background-color: rgb(168, 230, 247);
+}
+
+
+
 
 .right-sidebar {
 	width: 20%;
